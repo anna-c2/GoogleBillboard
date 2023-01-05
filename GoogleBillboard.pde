@@ -2,17 +2,16 @@ public final static String e = "2.7182818284590452353602874713526624977572470936
 public void setup()  
 {            
     //your code here 
-    String digits = e.substring(2,12);
-    double dNum = Double.parseDouble(digits);
-    System.out.println(dNum);
-    
-    for(int i = 2; i < e.length(); i++){
-      String checkThis = e.substring(i, i+10);
-      for(int i = 0; i < checkThis.length(); i++){
-        if( isPrime(Integer.
+  
+    for(int i = 2; i < e.length()-10; i++){
+      String checkThis = e.substring(i, i+10);      
+      double checkThisNum = Double.parseDouble(checkThis);
+      if(isPrime(checkThisNum)==true){
+        System.out.println(checkThisNum);
       }
     
-}  
+  }  
+}
 public void draw()  
 {   
   //not needed for this assignment
